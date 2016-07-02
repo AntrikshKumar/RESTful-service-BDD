@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="17" failures="0" name="info.customer.test.TestRunner" time="0.022" errors="0" skipped="0">
+<testsuite tests="37" failures="0" name="info.customer.test.TestRunner" time="0.061" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\uditc\WebService\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4746618476793202503.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\uditc\WebService\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7051165850493888195.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\Program Files (x86)\PHP\v5.6;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Git\cmd;C:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Users\uditc\android-sdks\tools;C:\Users\uditc\android-sdks\platform-tools;C:\Program Files\nodejs\;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft Emulator Manager\1.0\;%CATALINA_HOME%\bin;C:\Program Files\Docker Toolbox;C:\Users\uditc\AppData\Roaming\npm;C:\Users\uditc\AppData\Local\atom\bin;E:\eclipse-java-mars-2-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,20 +61,40 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0.002"/>
+  <testcase classname="Scenario: Add/create a new customer&apos;s data" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0.003"/>
+  <testcase classname="Scenario: Add/create a new customer&apos;s data" name="Given the client has to add a new customer with name &quot;Udit&quot;, address &quot;Random Street&quot; and phone &quot;229911122&quot;" time="0"/>
+  <testcase classname="Scenario: Add/create a new customer&apos;s data" name="When the client sends the POST request" time="0"/>
+  <testcase classname="Scenario: Add/create a new customer&apos;s data" name="Then the client should obtain the following XML message" time="0"/>
+  <testcase classname="Scenario: Add/create a new customer&apos;s data" name="Scenario: Add/create a new customer&apos;s data" time="0.014"/>
+  <testcase classname="| David | 2 random st. | 226611000 |" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
+  <testcase classname="| David | 2 random st. | 226611000 |" name="Given the client has to add a new customer with name &quot;David&quot;, address &quot;2 random st.&quot; and phone &quot;226611000&quot;" time="0"/>
+  <testcase classname="| David | 2 random st. | 226611000 |" name="When the client sends the POST request" time="0"/>
+  <testcase classname="| David | 2 random st. | 226611000 |" name="Then the client should obtain the following XML message" time="0"/>
+  <testcase classname="| David | 2 random st. | 226611000 |" name="| David | 2 random st. | 226611000 |" time="0.019"/>
+  <testcase classname="| Peter | Queen St. | 220001166 |" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
+  <testcase classname="| Peter | Queen St. | 220001166 |" name="Given the client has to add a new customer with name &quot;Peter&quot;, address &quot;Queen St.&quot; and phone &quot;220001166&quot;" time="0"/>
+  <testcase classname="| Peter | Queen St. | 220001166 |" name="When the client sends the POST request" time="0"/>
+  <testcase classname="| Peter | Queen St. | 220001166 |" name="Then the client should obtain the following XML message" time="0"/>
+  <testcase classname="| Peter | Queen St. | 220001166 |" name="| Peter | Queen St. | 220001166 |" time="0.005"/>
+  <testcase classname="| Gary | Hobsan St. | 661062217 |" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
+  <testcase classname="| Gary | Hobsan St. | 661062217 |" name="Given the client has to add a new customer with name &quot;Gary&quot;, address &quot;Hobsan St.&quot; and phone &quot;661062217&quot;" time="0"/>
+  <testcase classname="| Gary | Hobsan St. | 661062217 |" name="When the client sends the POST request" time="0"/>
+  <testcase classname="| Gary | Hobsan St. | 661062217 |" name="Then the client should obtain the following XML message" time="0"/>
+  <testcase classname="| Gary | Hobsan St. | 661062217 |" name="| Gary | Hobsan St. | 661062217 |" time="0.005"/>
+  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
   <testcase classname="Scenario: Read an existing customer&apos;s data" name="Given database has a customer&apos;s data with name &quot;Udit&quot;, address &quot;Random Street&quot; and phone &quot;229911122&quot;" time="0"/>
   <testcase classname="Scenario: Read an existing customer&apos;s data" name="When the client sends the GET request with name &quot;Udit&quot;" time="0"/>
   <testcase classname="Scenario: Read an existing customer&apos;s data" name="Then the client should obtain the following XML message" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Scenario: Read an existing customer&apos;s data" time="0.008"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Given database has a customer&apos;s data with name &quot;David&quot;, address &quot;2 random st.&quot; and phone &quot;226611000&quot;" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="And database has another customer&apos;s data with name &quot;Peter&quot;, address &quot;Queen St.&quot; and phone &quot;220001166&quot;" time="0.001"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="And database has another customer&apos;s data with name &quot;Gary&quot;, address &quot;Hobsan St.&quot; and phone &quot;661062217&quot;" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="When the client sends the GET request" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Then the client should obtain the following XML message" time="0"/>
-  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Scenario: Read an existing customer&apos;s data" time="0.005"/>
+  <testcase classname="Scenario: Read an existing customer&apos;s data" name="Scenario: Read an existing customer&apos;s data" time="0.006"/>
+  <testcase classname="Scenario: Fetching all the data" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
+  <testcase classname="Scenario: Fetching all the data" name="Given database has a customer&apos;s data with name &quot;David&quot;, address &quot;2 random st.&quot; and phone &quot;226611000&quot;" time="0"/>
+  <testcase classname="Scenario: Fetching all the data" name="And database has another customer&apos;s data with name &quot;Peter&quot;, address &quot;Queen St.&quot; and phone &quot;220001166&quot;" time="0"/>
+  <testcase classname="Scenario: Fetching all the data" name="And database has another customer&apos;s data with name &quot;Gary&quot;, address &quot;Hobsan St.&quot; and phone &quot;661062217&quot;" time="0"/>
+  <testcase classname="Scenario: Fetching all the data" name="When the client sends the GET request" time="0"/>
+  <testcase classname="Scenario: Fetching all the data" name="Then the client should obtain the following XML message" time="0.001"/>
+  <testcase classname="Scenario: Fetching all the data" name="Scenario: Fetching all the data" time="0.001"/>
   <testcase classname="Scenario: Try to get data of non existing customer" name="Given URL is &quot;http://localhost:8080/CustomerData/rest/xml/&quot;" time="0"/>
-  <testcase classname="Scenario: Try to get data of non existing customer" name="Given there is no customer&apos;s data with name &quot;RandomCustomer&quot;" time="0"/>
+  <testcase classname="Scenario: Try to get data of non existing customer" name="Given there is no customer&apos;s data with name &quot;RandomCustomer&quot;" time="0.001"/>
   <testcase classname="Scenario: Try to get data of non existing customer" name="When the client sends the GET request with name &quot;RandomCustomer&quot;" time="0"/>
   <testcase classname="Scenario: Try to get data of non existing customer" name="Then the client should obtain the following XML message" time="0"/>
   <testcase classname="Scenario: Try to get data of non existing customer" name="Scenario: Try to get data of non existing customer" time="0.006"/>

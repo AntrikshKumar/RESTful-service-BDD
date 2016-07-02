@@ -1,4 +1,483 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("actionRead.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("actionCreate.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Add/create customer\u0027s data into RESTful service",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service",
+  "keyword": "Feature"
+});
+formatter.background({
+  "line": 2,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 3,
+  "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://localhost:8080/CustomerData/rest/xml/",
+      "offset": 8
+    }
+  ],
+  "location": "StepDefs.URL_is(String)"
+});
+formatter.result({
+  "duration": 123159906,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 5,
+  "name": "Add/create a new customer\u0027s data",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-a-new-customer\u0027s-data",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 6,
+  "name": "the client has to add a new customer with name \"Udit\", address \"Random Street\" and phone \"229911122\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "the client sends the POST request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "the client should obtain the following XML message",
+  "keyword": "Then ",
+  "doc_string": {
+    "content_type": "",
+    "line": 9,
+    "value": "\u003cCustomer\u003e\r\n\u003cname\u003eUdit\u003c/name\u003e\r\n\u003caddress\u003eRandom Street\u003c/address\u003e\r\n\u003cphone\u003e229911122\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Udit",
+      "offset": 48
+    },
+    {
+      "val": "Random Street",
+      "offset": 64
+    },
+    {
+      "val": "229911122",
+      "offset": 90
+    }
+  ],
+  "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+});
+formatter.result({
+  "duration": 4590951,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_sends_the_POST_request()"
+});
+formatter.result({
+  "duration": 13265909,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+});
+formatter.result({
+  "duration": 11354692,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 6049751,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 18,
+  "name": "Add/create multiple customer\u0027s data",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 19,
+  "name": "the client has to add a new customer with name \"\u003cuserName\u003e\", address \"\u003cuserAddress\u003e\" and phone \"\u003cuserPhone\u003e\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "the client sends the POST request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "the client should obtain the following XML message",
+  "keyword": "Then ",
+  "doc_string": {
+    "content_type": "",
+    "line": 22,
+    "value": "\u003cCustomer\u003e\r\n\u003cname\u003e\u003cuserName\u003e\u003c/name\u003e\r\n\u003caddress\u003e\u003cuserAddress\u003e\u003c/address\u003e\r\n\u003cphone\u003e\u003cuserPhone\u003e\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+  }
+});
+formatter.examples({
+  "line": 30,
+  "name": "",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;",
+  "rows": [
+    {
+      "cells": [
+        "userName",
+        "userAddress",
+        "userPhone"
+      ],
+      "line": 31,
+      "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;1"
+    },
+    {
+      "cells": [
+        "David",
+        "2 random st.",
+        "226611000"
+      ],
+      "line": 32,
+      "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;2"
+    },
+    {
+      "cells": [
+        "Peter",
+        "Queen St.",
+        "220001166"
+      ],
+      "line": 33,
+      "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;3"
+    },
+    {
+      "cells": [
+        "Gary",
+        "Hobsan St.",
+        "661062217"
+      ],
+      "line": 34,
+      "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;4"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.background({
+  "line": 2,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 3,
+  "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://localhost:8080/CustomerData/rest/xml/",
+      "offset": 8
+    }
+  ],
+  "location": "StepDefs.URL_is(String)"
+});
+formatter.result({
+  "duration": 178597,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 32,
+  "name": "Add/create multiple customer\u0027s data",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 19,
+  "name": "the client has to add a new customer with name \"David\", address \"2 random st.\" and phone \"226611000\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "the client sends the POST request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "the client should obtain the following XML message",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Then ",
+  "doc_string": {
+    "content_type": "",
+    "line": 22,
+    "value": "\u003cCustomer\u003e\r\n\u003cname\u003eDavid\u003c/name\u003e\r\n\u003caddress\u003e2 random st.\u003c/address\u003e\r\n\u003cphone\u003e226611000\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "David",
+      "offset": 48
+    },
+    {
+      "val": "2 random st.",
+      "offset": 65
+    },
+    {
+      "val": "226611000",
+      "offset": 90
+    }
+  ],
+  "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+});
+formatter.result({
+  "duration": 532233,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_sends_the_POST_request()"
+});
+formatter.result({
+  "duration": 1390048,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+});
+formatter.result({
+  "duration": 11294633,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 6704472,
+  "status": "passed"
+});
+formatter.background({
+  "line": 2,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 3,
+  "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://localhost:8080/CustomerData/rest/xml/",
+      "offset": 8
+    }
+  ],
+  "location": "StepDefs.URL_is(String)"
+});
+formatter.result({
+  "duration": 177806,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 33,
+  "name": "Add/create multiple customer\u0027s data",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 19,
+  "name": "the client has to add a new customer with name \"Peter\", address \"Queen St.\" and phone \"220001166\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "the client sends the POST request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "the client should obtain the following XML message",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Then ",
+  "doc_string": {
+    "content_type": "",
+    "line": 22,
+    "value": "\u003cCustomer\u003e\r\n\u003cname\u003ePeter\u003c/name\u003e\r\n\u003caddress\u003eQueen St.\u003c/address\u003e\r\n\u003cphone\u003e220001166\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Peter",
+      "offset": 48
+    },
+    {
+      "val": "Queen St.",
+      "offset": 65
+    },
+    {
+      "val": "220001166",
+      "offset": 87
+    }
+  ],
+  "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+});
+formatter.result({
+  "duration": 361143,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_sends_the_POST_request()"
+});
+formatter.result({
+  "duration": 250509,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+});
+formatter.result({
+  "duration": 9122634,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 4164216,
+  "status": "passed"
+});
+formatter.background({
+  "line": 2,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 3,
+  "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://localhost:8080/CustomerData/rest/xml/",
+      "offset": 8
+    }
+  ],
+  "location": "StepDefs.URL_is(String)"
+});
+formatter.result({
+  "duration": 197957,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 34,
+  "name": "Add/create multiple customer\u0027s data",
+  "description": "",
+  "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 19,
+  "name": "the client has to add a new customer with name \"Gary\", address \"Hobsan St.\" and phone \"661062217\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "the client sends the POST request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 21,
+  "name": "the client should obtain the following XML message",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "Then ",
+  "doc_string": {
+    "content_type": "",
+    "line": 22,
+    "value": "\u003cCustomer\u003e\r\n\u003cname\u003eGary\u003c/name\u003e\r\n\u003caddress\u003eHobsan St.\u003c/address\u003e\r\n\u003cphone\u003e661062217\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Gary",
+      "offset": 48
+    },
+    {
+      "val": "Hobsan St.",
+      "offset": 64
+    },
+    {
+      "val": "661062217",
+      "offset": 87
+    }
+  ],
+  "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+});
+formatter.result({
+  "duration": 341782,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_sends_the_POST_request()"
+});
+formatter.result({
+  "duration": 543296,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+});
+formatter.result({
+  "duration": 8019842,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3459710,
+  "status": "passed"
+});
+formatter.uri("actionRead.feature");
 formatter.feature({
   "line": 1,
   "name": "Read/Get customer\u0027s data from RESTful service",
@@ -28,7 +507,7 @@ formatter.match({
   "location": "StepDefs.URL_is(String)"
 });
 formatter.result({
-  "duration": 120563147,
+  "duration": 142640,
   "status": "passed"
 });
 formatter.scenario({
@@ -77,7 +556,7 @@ formatter.match({
   "location": "StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(String,String,String)"
 });
 formatter.result({
-  "duration": 116907456,
+  "duration": 7282935,
   "status": "passed"
 });
 formatter.match({
@@ -90,18 +569,18 @@ formatter.match({
   "location": "StepDefs.the_client_sends_the_GET_request_with_name(String)"
 });
 formatter.result({
-  "duration": 7313754,
+  "duration": 6615174,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
 });
 formatter.result({
-  "duration": 2262482,
+  "duration": 128020,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4952885,
+  "duration": 4718972,
   "status": "passed"
 });
 formatter.background({
@@ -126,14 +605,14 @@ formatter.match({
   "location": "StepDefs.URL_is(String)"
 });
 formatter.result({
-  "duration": 539740,
+  "duration": 158445,
   "status": "passed"
 });
 formatter.scenario({
   "line": 19,
-  "name": "Read an existing customer\u0027s data",
+  "name": "Fetching all the data",
   "description": "",
-  "id": "read/get-customer\u0027s-data-from-restful-service;read-an-existing-customer\u0027s-data",
+  "id": "read/get-customer\u0027s-data-from-restful-service;fetching-all-the-data",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -185,7 +664,7 @@ formatter.match({
   "location": "StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(String,String,String)"
 });
 formatter.result({
-  "duration": 7292812,
+  "duration": 7561497,
   "status": "passed"
 });
 formatter.match({
@@ -206,7 +685,7 @@ formatter.match({
   "location": "StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(String,String,String)"
 });
 formatter.result({
-  "duration": 7224061,
+  "duration": 6661799,
   "status": "passed"
 });
 formatter.match({
@@ -227,25 +706,25 @@ formatter.match({
   "location": "StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(String,String,String)"
 });
 formatter.result({
-  "duration": 8811275,
+  "duration": 7071148,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_client_sends_the_GET_request()"
 });
 formatter.result({
-  "duration": 6299074,
+  "duration": 5399376,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
 });
 formatter.result({
-  "duration": 276192,
+  "duration": 180177,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5562957,
+  "duration": 7256461,
   "status": "passed"
 });
 formatter.background({
@@ -270,7 +749,7 @@ formatter.match({
   "location": "StepDefs.URL_is(String)"
 });
 formatter.result({
-  "duration": 150543,
+  "duration": 239841,
   "status": "passed"
 });
 formatter.scenario({
@@ -311,7 +790,7 @@ formatter.match({
   "location": "StepDefs.there_is_no_customer_s_data_with_name(String)"
 });
 formatter.result({
-  "duration": 5683075,
+  "duration": 5555450,
   "status": "passed"
 });
 formatter.match({
@@ -324,18 +803,18 @@ formatter.match({
   "location": "StepDefs.the_client_sends_the_GET_request_with_name(String)"
 });
 formatter.result({
-  "duration": 6393114,
+  "duration": 8994219,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
 });
 formatter.result({
-  "duration": 117748,
+  "duration": 126835,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4408009,
+  "duration": 4376794,
   "status": "passed"
 });
 });

@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.304758">
-<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="0.252">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="7" time="0.27763">
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create a new customer's data" time="0.158421">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Udit", address "Random Street" and phone "229911122".passed
+When the client sends the POST request......................................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data" time="0.0201">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "David", address "2 random st." and phone "226611000".passed
+When the client sends the POST request......................................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data 2" time="0.014076">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Peter", address "Queen St." and phone "220001166".passed
+When the client sends the POST request......................................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data 3" time="0.012563">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Gary", address "Hobsan St." and phone "661062217".passed
+When the client sends the POST request......................................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="0.018888">
 <system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
 Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122".passed
 When the client sends the GET request with name "Udit"......................passed
 Then the client should obtain the following XML message.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="0.036006">
+<testcase classname="Read/Get customer's data from RESTful service" name="Fetching all the data" time="0.034289">
 <system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
 Given database has a customer's data with name "David", address "2 random st." and phone "226611000".passed
 And database has another customer's data with name "Peter", address "Queen St." and phone "220001166".passed
@@ -16,7 +44,7 @@ When the client sends the GET request.......................................pass
 Then the client should obtain the following XML message.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Read/Get customer's data from RESTful service" name="Try to get data of non existing customer" time="0.016752">
+<testcase classname="Read/Get customer's data from RESTful service" name="Try to get data of non existing customer" time="0.019293">
 <system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
 Given there is no customer's data with name "RandomCustomer"................passed
 When the client sends the GET request with name "RandomCustomer"............passed
