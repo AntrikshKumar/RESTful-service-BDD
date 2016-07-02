@@ -1,0 +1,410 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 165983101,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8080/CustomerData/rest/xml/",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.URL_is(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Add/create a new customer\u0027s data",
+        "description": "",
+        "id": "add/create-customer\u0027s-data-into-restful-service;add/create-a-new-customer\u0027s-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4203729,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the client has to add a new customer with name \"Udit\", address \"Random Street\" and phone \"229911122\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Udit",
+                  "offset": 48
+                },
+                {
+                  "val": "Random Street",
+                  "offset": 64
+                },
+                {
+                  "val": "229911122",
+                  "offset": 90
+                }
+              ],
+              "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13320041,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the client sends the POST request",
+            "match": {
+              "location": "StepDefs.the_client_sends_the_POST_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100032479,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client should obtain the following XML message",
+            "match": {
+              "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "\u003cCustomer\u003e\r\n\u003cname\u003eUdit\u003c/name\u003e\r\n\u003caddress\u003eRandom Street\u003c/address\u003e\r\n\u003cphone\u003e229911122\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+            }
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 173064,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8080/CustomerData/rest/xml/",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.URL_is(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 32,
+        "name": "Add/create multiple customer\u0027s data",
+        "description": "",
+        "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 340202,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client has to add a new customer with name \"David\", address \"2 random st.\" and phone \"226611000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "David",
+                  "offset": 48
+                },
+                {
+                  "val": "2 random st.",
+                  "offset": 65
+                },
+                {
+                  "val": "226611000",
+                  "offset": 90
+                }
+              ],
+              "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 280538,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the client sends the POST request",
+            "match": {
+              "location": "StepDefs.the_client_sends_the_POST_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10536785,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the client should obtain the following XML message",
+            "match": {
+              "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 22,
+              "value": "\u003cCustomer\u003e\r\n\u003cname\u003eDavid\u003c/name\u003e\r\n\u003caddress\u003e2 random st.\u003c/address\u003e\r\n\u003cphone\u003e226611000\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+            }
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 191240,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8080/CustomerData/rest/xml/",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.URL_is(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 33,
+        "name": "Add/create multiple customer\u0027s data",
+        "description": "",
+        "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 311358,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client has to add a new customer with name \"Peter\", address \"Queen St.\" and phone \"220001166\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Peter",
+                  "offset": 48
+                },
+                {
+                  "val": "Queen St.",
+                  "offset": 65
+                },
+                {
+                  "val": "220001166",
+                  "offset": 87
+                }
+              ],
+              "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 233913,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the client sends the POST request",
+            "match": {
+              "location": "StepDefs.the_client_sends_the_POST_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6782311,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the client should obtain the following XML message",
+            "match": {
+              "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 22,
+              "value": "\u003cCustomer\u003e\r\n\u003cname\u003ePeter\u003c/name\u003e\r\n\u003caddress\u003eQueen St.\u003c/address\u003e\r\n\u003cphone\u003e220001166\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+            }
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 127230,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "URL is \"http://localhost:8080/CustomerData/rest/xml/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:8080/CustomerData/rest/xml/",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.URL_is(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "Add/create multiple customer\u0027s data",
+        "description": "",
+        "id": "add/create-customer\u0027s-data-into-restful-service;add/create-multiple-customer\u0027s-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 357193,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client has to add a new customer with name \"Gary\", address \"Hobsan St.\" and phone \"661062217\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Gary",
+                  "offset": 48
+                },
+                {
+                  "val": "Hobsan St.",
+                  "offset": 64
+                },
+                {
+                  "val": "661062217",
+                  "offset": 87
+                }
+              ],
+              "location": "StepDefs.add_a_new_customer_with_name_address_and_phone(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 204675,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the client sends the POST request",
+            "match": {
+              "location": "StepDefs.the_client_sends_the_POST_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8125339,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the client should obtain the following XML message",
+            "match": {
+              "location": "StepDefs.the_client_should_obtain_the_following_XML(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 22,
+              "value": "\u003cCustomer\u003e\r\n\u003cname\u003eGary\u003c/name\u003e\r\n\u003caddress\u003eHobsan St.\u003c/address\u003e\r\n\u003cphone\u003e661062217\u003c/phone\u003e\r\n\u003c/Customer\u003e"
+            }
+          }
+        ]
+      }
+    ],
+    "name": "Add/create customer\u0027s data into RESTful service",
+    "description": "",
+    "id": "add/create-customer\u0027s-data-into-restful-service",
+    "keyword": "Feature",
+    "uri": "actionCreate.feature"
+  }
+]

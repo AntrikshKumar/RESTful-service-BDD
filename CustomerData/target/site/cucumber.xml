@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.304758">
+<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="0.252">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122".passed
+When the client sends the GET request with name "Udit"......................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="0.036006">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "David", address "2 random st." and phone "226611000".passed
+And database has another customer's data with name "Peter", address "Queen St." and phone "220001166".passed
+And database has another customer's data with name "Gary", address "Hobsan St." and phone "661062217".passed
+When the client sends the GET request.......................................passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Try to get data of non existing customer" time="0.016752">
+<system-out><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given there is no customer's data with name "RandomCustomer"................passed
+When the client sends the GET request with name "RandomCustomer"............passed
+Then the client should obtain the following XML message.....................passed
+]]></system-out>
+</testcase>
+</testsuite>
