@@ -37,6 +37,8 @@ public class Utility {
 		actual = actual.replace("\r\n", "").replace("\n", "");
 		expected = expected.replace("\r\n", "").replace("\n", "");
 		
+		System.out.println("Actual:\t\t"+actual);
+		System.out.println("expected:\t\t"+expected);
 
 		System.out.println("Result: "+actual.equals(expected));
 		org.junit.Assert.assertEquals(actual,expected);

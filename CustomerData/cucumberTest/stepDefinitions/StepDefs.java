@@ -23,12 +23,13 @@ public class StepDefs extends Utility{
 	    this.url = arg1;
 	}
 	@After
+	@When("^the client sends the DELETE request$")
 	public void cleanDatabase() throws IOException{
 		this.uc = connSetup(this.url+"deleteAll","DELETE");
 		this.uc.connect();
-		String msg = readData(this.uc);
-		System.out.println(msg);
-		System.out.println("DatabaseCleaned");
+		msg = readData(this.uc);
+		System.out.println("msg received after deleteall"+msg);
+
 	}
 	
 	@Given("^the client has to add a new customer with name \"([^\"]*)\", address \"([^\"]*)\" and phone \"([^\"]*)\"$")
@@ -105,7 +106,22 @@ public class StepDefs extends Utility{
 			org.junit.Assert.fail("URL Malformed");
 		}		
 	}
-	
+
+	@When("^the client sends DELETE request with name \"([^\"]*)\"$")
+	public void the_client_sends_DELETE_request_with_name(String arg1) {
+		try {
+			String pURL = "";
+			pURL= this.url+"delete/"+URLEncoder.encode(arg1, "UTF-8");
+			System.out.println("URL ____ "+pURL);
+			this.uc = connSetup(pURL,"DELETE");
+			this.uc.connect();
+			msg = readData(this.uc);
+			System.out.println("Received: "+msg);
+		} catch(Throwable t){
+			System.out.println("Exception occured : " + t.getMessage());
+			org.junit.Assert.fail("URL Malformed");
+		}
+	}
 	
 	@When("^the client sends the GET request$")	
 	public void the_client_sends_the_GET_request() {
@@ -122,11 +138,31 @@ public class StepDefs extends Utility{
 			org.junit.Assert.fail("URL Malformed");
 		}		
 	}
+	
+	@When("^the client sends PUT request with name \"([^\"]*)\", address \"([^\"]*)\" and phone \"([^\"]*)\"$")
+	public void the_client_sends_PUT_request_with_name_address_and_phone(String arg1, String arg2, String arg3) {
+		try {
+			String pURL = "";
+			pURL= this.url+"update/"+URLEncoder.encode(arg1, "UTF-8")+"/"+ URLEncoder.encode(arg2, "UTF-8")+"/"+arg3;
+			System.out.println("URL ____ "+pURL);
+			this.uc = connSetup(pURL,"PUT");
+			this.uc.connect();
+			msg = readData(this.uc);
+			System.out.println("Received: "+msg);
+		} catch(Throwable t){
+			System.out.println("Exception occured : " + t.getMessage());
+			org.junit.Assert.fail("URL Malformed");
+		}
+	}
+	
+
+	
 	@Then("^the client should obtain the following XML message$")
 	public void the_client_should_obtain_the_following_XML(String arg1) throws SAXException, IOException {
-
+System.out.println("MSG at the moment: "+ msg);
 		if(msg == null){
 			msg = readData(this.uc);
+System.out.println("inside if null MSG at the moment: "+ msg);
 		}
 		compareXML(arg1,msg);
 	    

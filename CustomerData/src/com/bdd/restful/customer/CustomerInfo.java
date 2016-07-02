@@ -42,7 +42,13 @@ public class CustomerInfo {
 
 		if(customer!=null){
 			customerMap.put(name, new Customer(name, address, phone));
-			respStr = "<SuccessMessage>Customer "+name+" updated with below details></SuccessMessage>\n<name>"+customer.name+"</name>\n<address>"+customer.address+"</address>\n<phone>"+customer.phone+"</phone>\n";
+			customer = customerMap.get(name);
+			respStr = "<SuccessMessage>Customer's Data Updated</SuccessMessage>"+
+					"<Customer>"+
+						"<name>"+customer.name+"</name>"+
+						"<address>"+customer.address+"</address>"+
+						"<phone>"+customer.phone+"</phone>"+
+					"</Customer>";
 		} else {
 			respStr = "<ErrorMessage>Customer Not Exist with name: "+name+"</ErrorMessage>";
 		}
@@ -102,7 +108,7 @@ public class CustomerInfo {
 		
 		if(customer!=null){
 			customerMap.remove(name);
-			respStr = "<SuccessMessage>Customer "+name+" has been deleted></SuccessMessage>";
+			respStr = "<SuccessMessage>Customer \""+name+"\" has been deleted</SuccessMessage>";
 		} else {
 			respStr = "<ErrorMessage>Customer Not Exist with name: "+name+"</ErrorMessage>";
 		}
