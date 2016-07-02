@@ -17,7 +17,7 @@ public class StepDefs extends Utility{
 	
 	private String url;
 	private URLConnection uc;
-	private String msg = "";
+	private String msg = null;
 	@Given("^URL is \"([^\"]*)\"$")
 	public void URL_is(String arg1) {
 	    this.url = arg1;
@@ -82,8 +82,10 @@ public class StepDefs extends Utility{
 	public void the_client_sends_the_POST_request() {
 		
 		try {
+			System.out.println("Inside try block the_client_sends_the_POST_request");
 			this.uc.connect();
 		} catch (IOException e) {
+			System.out.println("Inside catch block the_client_sends_the_POST_request");
 			org.junit.Assert.fail("Exception occured: Unable to connect");
 		}
 	}
@@ -122,9 +124,9 @@ public class StepDefs extends Utility{
 	}
 	@Then("^the client should obtain the following XML message$")
 	public void the_client_should_obtain_the_following_XML(String arg1) throws SAXException, IOException {
-		
+
 		if(msg == null){
-		msg = readData(this.uc);
+			msg = readData(this.uc);
 		}
 		compareXML(arg1,msg);
 	    
