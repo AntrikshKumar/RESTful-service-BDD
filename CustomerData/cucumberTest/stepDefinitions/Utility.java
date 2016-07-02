@@ -12,21 +12,21 @@ import java.nio.charset.Charset;
 public class Utility {
 
 	public String readData(URLConnection uc){
-		InputStream is;
+		InputStream inptStrm;
 		try {
+		inptStrm = uc.getInputStream();
+			BufferedReader bffrdRdr = new BufferedReader(new InputStreamReader(inptStrm, Charset.forName("UTF-8")));
+			StringBuilder strnBldr = new StringBuilder();
+			int i=0;
+			while ((i = bffrdRdr.read()) != -1) {
 
-			is = uc.getInputStream();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-			StringBuilder sb = new StringBuilder();
-			int cp=0;
-			while ((cp = rd.read()) != -1) {
-
-				sb.append((char) cp);
+				strnBldr.append((char) i);
 			}
 
-			return sb.toString();
+			return strnBldr.toString();
 		} catch (IOException e) {
-			System.out.println("Inside catch : "+ e.getMessage());
+			System.out.println("Exception occured : " + e.getMessage());
+			org.junit.Assert.fail("Failure at: readData");
 		}
 
 		return null;
@@ -38,7 +38,7 @@ public class Utility {
 		expected = expected.replace("\r\n", "").replace("\n", "");
 		
 		System.out.println("Actual:\t\t"+actual);
-		System.out.println("expected:\t\t"+expected);
+		System.out.println("expected:\t"+expected);
 
 		System.out.println("Result: "+actual.equals(expected));
 		org.junit.Assert.assertEquals(actual,expected);
@@ -54,7 +54,23 @@ public class Utility {
 		return uc;
 		
 		} catch(Throwable t){
-			t.printStackTrace();
+			System.out.println("Exception occured : " + t.getMessage());
+			org.junit.Assert.fail("Failure at: connSetup");
+		}
+		return null;
+	}
+	
+	public String sendReq(URLConnection uc,String type,String url){
+		try {
+			String msg;
+			System.out.println("URL ____ "+url);
+			uc = connSetup(url,type);
+			uc.connect();
+			msg = readData(uc);
+			return msg;
+		} catch(Throwable t){
+			System.out.println("Exception occured : " + t.getMessage());
+			org.junit.Assert.fail("Failure at: sendReq");
 		}
 		return null;
 	}
