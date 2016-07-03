@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="12" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="24.253498">
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create a new customer's data" time="2.150264">
+<failure message="java.lang.AssertionError: Failure at: the_client_sends_the_POST_request&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)&#13;&#10;&#9;at ✽.When the client sends the POST request(actionCreate.feature:7)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Udit", address "Random Street" and phone "229911122".passed
+When the client sends the POST request......................................failed
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: the_client_sends_the_POST_request
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)
+	at ✽.When the client sends the POST request(actionCreate.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data" time="2.009159">
+<failure message="java.lang.AssertionError: Failure at: the_client_sends_the_POST_request&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)&#13;&#10;&#9;at ✽.When the client sends the POST request(actionCreate.feature:20)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "David", address "2 random st." and phone "226611000".passed
+When the client sends the POST request......................................failed
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: the_client_sends_the_POST_request
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)
+	at ✽.When the client sends the POST request(actionCreate.feature:20)
+]]></failure>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data 2" time="2.009773">
+<failure message="java.lang.AssertionError: Failure at: the_client_sends_the_POST_request&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)&#13;&#10;&#9;at ✽.When the client sends the POST request(actionCreate.feature:20)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Peter", address "Queen St." and phone "220001166".passed
+When the client sends the POST request......................................failed
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: the_client_sends_the_POST_request
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)
+	at ✽.When the client sends the POST request(actionCreate.feature:20)
+]]></failure>
+</testcase>
+<testcase classname="Add/create customer's data into RESTful service" name="Add/create multiple customer's data 3" time="2.009299">
+<failure message="java.lang.AssertionError: Failure at: the_client_sends_the_POST_request&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)&#13;&#10;&#9;at ✽.When the client sends the POST request(actionCreate.feature:20)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given the client has to add a new customer with name "Gary", address "Hobsan St." and phone "661062217".passed
+When the client sends the POST request......................................failed
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: the_client_sends_the_POST_request
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.the_client_sends_the_POST_request(StepDefs.java:74)
+	at ✽.When the client sends the POST request(actionCreate.feature:20)
+]]></failure>
+</testcase>
+<testcase classname="Delete customer's data" name="Delete Existing Customer's data" time="2.008791">
+<failure message="java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)&#13;&#10;&#9;at ✽.Given database has a customer's data with name &quot;Udit&quot;, address &quot;Random Street&quot; and phone &quot;229911122&quot;(actionDelete.feature:7)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122".failed
+When the client sends DELETE request with name "Udit".......................skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)
+	at ✽.Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122"(actionDelete.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Delete customer's data" name="Try to delete data of non existing customer" time="2.010553">
+<failure message="java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)&#13;&#10;&#9;at ✽.Given there is no customer's data with name &quot;RandomCustomer&quot;(actionDelete.feature:15)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given there is no customer's data with name "RandomCustomer"................failed
+When the client sends DELETE request with name "RandomCustomer".............skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)
+	at ✽.Given there is no customer's data with name "RandomCustomer"(actionDelete.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="Delete customer's data" name="Delete all the Existing Customer's data" time="2.011718">
+<failure message="java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)&#13;&#10;&#9;at ✽.Given database has a customer's data with name &quot;David&quot;, address &quot;2 random st.&quot; and phone &quot;226611000&quot;(actionDelete.feature:23)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "David", address "2 random st." and phone "226611000".failed
+And database has another customer's data with name "Peter", address "Queen St." and phone "220001166".skipped
+And database has another customer's data with name "Gary", address "Hobsan St." and phone "661062217".skipped
+When the client sends the DELETE request....................................skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)
+	at ✽.Given database has a customer's data with name "David", address "2 random st." and phone "226611000"(actionDelete.feature:23)
+]]></failure>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Read an existing customer's data" time="2.009206">
+<failure message="java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)&#13;&#10;&#9;at ✽.Given database has a customer's data with name &quot;Udit&quot;, address &quot;Random Street&quot; and phone &quot;229911122&quot;(actionRead.feature:7)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122".failed
+When the client sends the GET request with name "Udit"......................skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)
+	at ✽.Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122"(actionRead.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Fetching all the data" time="2.008558">
+<failure message="java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)&#13;&#10;&#9;at ✽.Given database has a customer's data with name &quot;David&quot;, address &quot;2 random st.&quot; and phone &quot;226611000&quot;(actionRead.feature:20)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "David", address "2 random st." and phone "226611000".failed
+And database has another customer's data with name "Peter", address "Queen St." and phone "220001166".skipped
+And database has another customer's data with name "Gary", address "Hobsan St." and phone "661062217".skipped
+When the client sends the GET request.......................................skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)
+	at ✽.Given database has a customer's data with name "David", address "2 random st." and phone "226611000"(actionRead.feature:20)
+]]></failure>
+</testcase>
+<testcase classname="Read/Get customer's data from RESTful service" name="Try to get data of non existing customer" time="2.009381">
+<failure message="java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)&#13;&#10;&#9;at ✽.Given there is no customer's data with name &quot;RandomCustomer&quot;(actionRead.feature:46)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given there is no customer's data with name "RandomCustomer"................failed
+When the client sends the GET request with name "RandomCustomer"............skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)
+	at ✽.Given there is no customer's data with name "RandomCustomer"(actionRead.feature:46)
+]]></failure>
+</testcase>
+<testcase classname="Update/put existing customer data" name="Update Existing Customer's data" time="2.009696">
+<failure message="java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)&#13;&#10;&#9;at ✽.Given database has a customer's data with name &quot;Udit&quot;, address &quot;Random Street&quot; and phone &quot;229911122&quot;(actionUpdate.feature:7)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122".failed
+When the client sends PUT request with name "Udit", address "Glass Road, Mt.Roskill" and phone "229911122".skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: database_has_a_customer_s_data_with_name_address_and_phone
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.database_has_a_customer_s_data_with_name_address_and_phone(StepDefs.java:64)
+	at ✽.Given database has a customer's data with name "Udit", address "Random Street" and phone "229911122"(actionUpdate.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Update/put existing customer data" name="Try to update data of non existing customer" time="2.0071">
+<failure message="java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)&#13;&#10;&#9;at ✽.Given there is no customer's data with name &quot;RandomCustomer&quot;(actionUpdate.feature:20)&#13;&#10;"><![CDATA[Given URL is "http://localhost:8080/CustomerData/rest/xml/".................passed
+Given there is no customer's data with name "RandomCustomer"................failed
+When the client sends PUT request with name "RandomCustomer", address "Some Random Street,New Zealand" and phone "13243546".skipped
+Then the client should obtain the following XML message.....................skipped
+
+StackTrace:
+java.lang.AssertionError: Failure at: there_is_no_customer_s_data_with_name
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDefs.there_is_no_customer_s_data_with_name(StepDefs.java:52)
+	at ✽.Given there is no customer's data with name "RandomCustomer"(actionUpdate.feature:20)
+]]></failure>
+</testcase>
+</testsuite>
