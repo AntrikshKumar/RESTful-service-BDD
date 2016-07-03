@@ -44,7 +44,7 @@ PUT - to update existing data ( UPDATE )
 	
 	http://localhost:8080/CustomerData/rest/xml/update/Udit/Auckland,New Zealand/0229911122/
 
-DELETE -  to remove customer's data
+DELETE -  to remove customer's data ( DELETE )
 	
 	To remove particular customer's data: http://localhost:8080/CustomerData/rest/xml/delete/Udit
 	To remove all customer's data: http://localhost:8080/CustomerData/rest/xml/deleteAll
