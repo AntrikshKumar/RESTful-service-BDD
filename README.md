@@ -32,16 +32,20 @@ To see the results open index.html file places at CustomerData/target/site/cucum
 
 ### HTTP request Examples ###
 POST - to add new data ( CREATE )
+	
 	http://localhost:8080/CustomerData/rest/xml/add/Udit/Random Street/0229911122/
 
 GET - to read data ( READ )
+	
 	To read particular custoer's data:  http://localhost:8080/CustomerData/rest/xml/read/Udit
 	To read all data stored: http://localhost:8080/CustomerData/rest/xml/read/
 
 PUT - to update existing data ( UPDATE )
+	
 	http://localhost:8080/CustomerData/rest/xml/update/Udit/Auckland,New Zealand/0229911122/
 
 DELETE -  to remove customer's data
+	
 	To remove particular customer's data: http://localhost:8080/CustomerData/rest/xml/delete/Udit
 	To remove all customer's data: http://localhost:8080/CustomerData/rest/xml/deleteAll
 
