@@ -28,7 +28,8 @@ Following tools and software are used while developing this project:
 6. Run the project using Maven clean Test
 
  ![Report.PNG](https://bitbucket.org/repo/gLoxAn/images/2068606269-Report.PNG)
-To see the results open index.html file places at CustomerData/target/site/cucumber-pretty/index.html
+
+To see the results open index.html file created at CustomerData/target/site/cucumber-pretty/index.html
 
 ### HTTP request Examples ###
 POST - to add new data ( CREATE )
