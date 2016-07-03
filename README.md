@@ -25,7 +25,7 @@ Following tools and software are used while developing this project:
 3. Import the "CustomerData" project in eclipse
 4. Run the tomcat 7 server in Eclipse
 5. Add this web service into the tomcat
-6. Run the project using Maven Test
+6. Run the project using Maven clean Test
 
  ![Report.PNG](https://bitbucket.org/repo/gLoxAn/images/2068606269-Report.PNG)
 To see the results open index.html file places at CustomerData/target/site/cucumber-pretty/index.html
