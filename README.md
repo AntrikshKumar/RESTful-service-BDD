@@ -37,7 +37,7 @@ POST - to add new data ( CREATE )
 
 GET - to read data ( READ )
 	
-	To read particular custoer's data:  http://localhost:8080/CustomerData/rest/xml/read/Udit
+	To read particular customer's data:  http://localhost:8080/CustomerData/rest/xml/read/Udit
 	To read all data stored: http://localhost:8080/CustomerData/rest/xml/read/
 
 PUT - to update existing data ( UPDATE )
