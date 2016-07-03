@@ -2,7 +2,7 @@
 
 This RESTful web service is built using Behavioural Driven Development 
 
-### What is this repository for? ###
+### About the repository ###
 
 This repository contains the application code and BDD scenarios written in Gherkin.
 Following tools and software are used while developing this project:
